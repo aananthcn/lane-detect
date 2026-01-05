@@ -7,7 +7,18 @@ import argparse
 from ultralytics import YOLO
 
 # Always use the first display
-os.environ["DISPLAY"] = ":0"
+if sys.platform.startswith('linux'):
+    # If a DISPLAY is already set by the system, keep it.
+    # If not, try to find one that works.
+    if 'DISPLAY' not in os.environ:
+        # Check if :1 exists (common for GPU/Wayland systems), else default to :0
+        if os.path.exists("/tmp/.X11-unix/X1"):
+            os.environ["DISPLAY"] = ":1"
+        else:
+            os.environ["DISPLAY"] = ":0"
+    print(f"System: Linux | Using Display: {os.environ.get('DISPLAY')}")
+elif sys.platform == 'darwin':
+    print("System: macOS | Native display handling active")
 
 # Function to check if UDP port is available
 def check_udp_port_in_use(port):
@@ -47,8 +58,8 @@ def main():
 
     # Load the latest YOLO11 segmentation model
     # Note: For specific lane detection, you would typically use a model fine-tuned on lanes.
-    # 'yolo11n-seg.pt' is the standard pretrained model for general segmentation.
-    model = YOLO("yolo11n-seg.pt")
+    # 'yolo11s-seg.pt' is the standard pretrained model for general segmentation.
+    model = YOLO("my-ld-model.pt")
 
     cap = get_video_source(input_type, args.source)
 

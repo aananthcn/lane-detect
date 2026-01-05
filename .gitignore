@@ -4,3 +4,5 @@ venv
 test.*
 runs
 *.pt
+*.cache
+__pycache__/
