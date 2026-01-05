@@ -6,17 +6,17 @@ This project aims to compare and evaluate different Land Detection algorithms. T
 # Getting Started
 
 ## Python Setup
-`python3 -m venv venv`
-`source venv/bin/activate`
+ * `python3 -m venv venv`
+ * `source venv/bin/activate`
 
 <br>
 
 ## Python Installation
-`pip install ultralytics opencv-python roboflow`
+ * `pip install ultralytics opencv-python roboflow`
 
 ### For Linux
-`sudo apt-get update`
-`sudo apt-get install libxcb-xinerama0 libqt5gui5 libxkbcommon-x11-0 libxcb-cursor0`
+ * `sudo apt-get update`
+ * `sudo apt-get install libxcb-xinerama0 libqt5gui5 libxkbcommon-x11-0 libxcb-cursor0`
 
 <br>
 
