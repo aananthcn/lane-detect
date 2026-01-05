@@ -2,3 +2,5 @@ ufld
 venv
 *.mp4
 test.*
+runs
+*.pt
