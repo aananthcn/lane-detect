@@ -27,9 +27,10 @@ This project aims to compare and evaluate different Land Detection algorithms. T
 
 ## Download the model, if you can't train
 yolov11s: https://drive.google.com/file/d/1Rzfe2NsntfdErjt0HnNe4ebHg2a3tmgB/view?usp=sharing
-Note: 
- * Click the link above and search for download icon / button to download
- * Then move the my-ld-model.pt to root folder of this repo folder cloned on your machine
+
+*Note*: 
+ * To download the model, click the link above and search for download icon / button.
+ * Then move the my-ld-model.pt to root folder of this repo folder cloned on your machine.
 
 <br>
 
